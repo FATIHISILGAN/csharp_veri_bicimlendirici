@@ -2,7 +2,8 @@
 using System.Windows.Forms;
 
 namespace veri_biçimlendirme_algoritması
-{
+{                                              // started by Fatih Işılgan
+                                               
     public partial class Form1 : Form
     {
         public Form1()
@@ -25,14 +26,14 @@ namespace veri_biçimlendirme_algoritması
 
         }
 
-        private void button1_Click(object sender, EventArgs e)//biçimlendir
+        private void button1_Click(object sender, EventArgs e)//biçimlendir //formating
         {
             try
             {
               
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    string liste ="";
-                if (radioButton1.Checked == true)//virgülle sırala
+                if (radioButton1.Checked == true)//virgülle sırala //sort by comma
                 {
                     for (int i = 0; i < listBox1.Items.Count; i++)
                     {
@@ -45,11 +46,11 @@ namespace veri_biçimlendirme_algoritması
                             liste += listBox1.Items[i].ToString().ToString();
                         }
                     }
-                    textBox1.Text = liste;
+                    textBox1.Text = liste;// show new format
 
                     MessageBox.Show("biçimlendirildi");
                 }
-                else if(radioButton2.Checked==true)//c# dizisi dönüştürücü
+                else if(radioButton2.Checked==true)//string için c#  dizisi dönüştürücü //make c# array for string
                 {
                     liste += "string [] dizi={";
                     for (int i = 0; i < listBox1.Items.Count; i++)
@@ -63,13 +64,13 @@ namespace veri_biçimlendirme_algoritması
                             liste +=  @"""" + listBox1.Items[i].ToString().ToString()+@""""  + "}";
                         }
                     }
-                    textBox1.Text = liste;
+                    textBox1.Text = liste;// show new format
 
                     MessageBox.Show("biçimlendirildi");
 
 
                 }
-                else if (radioButton3.Checked == true)
+                else if (radioButton3.Checked == true)//int için c#  dizisi dönüştürücü //make c# array for int
                 {
                     liste += "int [] dizi={";
 
@@ -84,14 +85,14 @@ namespace veri_biçimlendirme_algoritması
                             liste +=  listBox1.Items[i].ToString().ToString()  + "}";
                         }
                     }
-                    textBox1.Text = liste;
+                    textBox1.Text = liste;// show new format
 
                     MessageBox.Show("biçimlendirildi");
                   
                 }
                 else
                 {
-                    MessageBox.Show("bir biçimlendirme yöntemi seçiniz");
+                    MessageBox.Show("bir biçimlendirme yöntemi seçiniz");// if  user dont choose for formating method 
                 }
             }
             catch(Exception a)
@@ -101,13 +102,13 @@ namespace veri_biçimlendirme_algoritması
 
         }
 
-        private void button3_Click(object sender, EventArgs e)//tamam
+        private void button3_Click(object sender, EventArgs e)//tamam //ok
         {
             panel1.Visible = false;
 
         }
 
-        private void button2_Click(object sender, EventArgs e)//ekle butonu
+        private void button2_Click(object sender, EventArgs e)//ekle butonu //add button
         {
             for(int i = 0; i < textBox2.Lines.Length; i++)
             {
@@ -119,7 +120,7 @@ namespace veri_biçimlendirme_algoritması
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)//veri ekle
+        private void button4_Click(object sender, EventArgs e)//veri ekle //add data
         {
             panel1.Visible = true;
         }
@@ -144,7 +145,7 @@ namespace veri_biçimlendirme_algoritması
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)//hepsini sil
+        private void button6_Click(object sender, EventArgs e)//hepsini sil// clear all
         {
             try
             {
